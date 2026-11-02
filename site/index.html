@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free Nursing-Student Freebies Directory - Asdale Dynamics, LLC</title>
+<meta name="description" content="A curated, hand-checked directory of free resources for nursing students: flashcards, NCLEX-style practice, open-access journals, scholarships, drug references, and sim-lab-style learning. Education only, no ads.">
+<style>
+  :root {
+    --bg: #faf8f5;
+    --card: #ffffff;
+    --ink: #2b2a28;
+    --muted: #6b675f;
+    --accent: #1e6f5c;
+    --accent-soft: #e4f0ec;
+    --line: #e6e1d9;
+    --tag-bg: #eef3f6;
+    --warn-bg: #fdf3e7;
+    --warn-ink: #7a5b1e;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.55;
+  }
+  header {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 3rem 1.25rem 1.5rem;
+  }
+  header .brand {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+  }
+  header h1 { margin: 0.25rem 0 0.5rem; font-size: 2rem; line-height: 1.2; }
+  header p.lede { color: var(--muted); max-width: 46rem; margin: 0 0 0.75rem; }
+  .disclaimer {
+    background: var(--warn-bg);
+    color: var(--warn-ink);
+    border: 1px solid #f0dcc0;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    max-width: 46rem;
+  }
+  .controls {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 1.25rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    z-index: 5;
+    padding-top: 0.75rem;
+  }
+  .controls button {
+    border: 1px solid var(--line);
+    background: var(--card);
+    color: var(--ink);
+    border-radius: 999px;
+    padding: 0.4rem 0.9rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  .controls button.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+  }
+  .controls input[type="search"] {
+    flex: 1 1 220px;
+    min-width: 200px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+    background: var(--card);
+  }
+  main { max-width: 980px; margin: 0 auto; padding: 0 1.25rem 3rem; }
+  section h2 {
+    font-size: 1.25rem;
+    margin: 2.25rem 0 0.25rem;
+    border-bottom: 2px solid var(--accent);
+    display: inline-block;
+    padding-bottom: 0.15rem;
+  }
+  section .cat-note { color: var(--muted); margin: 0.25rem 0 1rem; font-size: 0.95rem; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 1rem;
+  }
+  article.entry {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 1rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    transition: box-shadow 0.15s ease;
+  }
+  article.entry:hover { box-shadow: 0 2px 10px rgba(0,0,0,0.06); }
+  article.entry h3 { margin: 0; font-size: 1.05rem; }
+  article.entry h3 a { color: var(--accent); text-decoration: none; }
+  article.entry h3 a:hover { text-decoration: underline; }
+  article.entry .desc { margin: 0; font-size: 0.95rem; }
+  .fields { list-style: none; margin: 0.25rem 0 0; padding: 0; font-size: 0.85rem; }
+  .fields li { margin: 0.15rem 0; }
+  .fields li b { font-weight: 600; color: var(--muted); }
+  .verified {
+    margin-top: auto;
+    padding-top: 0.5rem;
+    border-top: 1px dashed var(--line);
+    font-size: 0.75rem;
+    color: var(--muted);
+    background: var(--tag-bg);
+    border-radius: 6px;
+    padding: 0.3rem 0.5rem;
+    margin-top: 0.5rem;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    background: var(--accent-soft);
+    color: var(--accent);
+    border-radius: 4px;
+    padding: 0.05rem 0.4rem;
+    margin-left: 0.35rem;
+    vertical-align: middle;
+  }
+  footer {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem 3rem;
+    color: var(--muted);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--line);
+  }
+  footer p { margin: 0.4rem 0; }
+  .empty { display: none; color: var(--muted); padding: 2rem 0; text-align: center; }
+  @media (max-width: 560px) {
+    header h1 { font-size: 1.5rem; }
+    .grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <p class="brand">Asdale Dynamics, LLC &middot; dylanasdale.github.io</p>
+  <h1>Free Nursing-Student Freebies Directory</h1>
+  <p class="lede">Hand-checked, genuinely free resources for nursing students. Everything listed says exactly what it costs, what it requires, and when it was last verified. Curated by a nurse (Dylan Asdale, RN) in plain English - like a friend would.</p>
+  <div class="disclaimer">
+    <strong>Education only - never medical advice.</strong> Nothing in this directory is for clinical decision-making. For real patients, always follow your instructor, your facility's policy, and a licensed provider or pharmacist.
+  </div>
+</header>
+
+<nav class="controls" aria-label="Filters">
+  <button data-filter="all" class="active">All</button>
+  <button data-filter="flashcards">Flashcards</button>
+  <button data-filter="nclex">NCLEX Practice</button>
+  <button data-filter="journals">Journals</button>
+  <button data-filter="scholarships">Scholarships</button>
+  <button data-filter="drugs">Drug References</button>
+  <button data-filter="sims">Sim Labs</button>
+  <input type="search" id="search" placeholder="Search entries&hellip;" aria-label="Search entries">
+</nav>
+
+<main>
+  <p id="empty" class="empty">No entries match. Try a different search or filter.</p>
+
+  <section id="flashcards" data-category="flashcards">
+    <h2>Flashcards</h2>
+    <p class="cat-note">Free (or free-tier) ways to build and study card decks.</p>
+    <div class="grid">
+      <article class="entry" data-tags="anki spaced repetition offline desktop mobile free">
+        <h3><a href="https://apps.ankiweb.net" rel="noopener">Anki<span class="badge">Open source</span></a></h3>
+        <p class="desc">A spaced-repetition flashcard program - the same technique med students swear by. Download shared nursing decks or build your own; you control everything on your own device.</p>
+        <ul class="fields">
+          <li><b>What:</b> Desktop + mobile spaced-repetition flashcards</li>
+          <li><b>Cost:</b> Free on desktop, web, and Android ($24.99 one-time for the official iOS app, made by a separate developer)</li>
+          <li><b>Requirements:</b> Download the app; no account needed. AnkiWeb sync is optional (free account)</li>
+          <li><b>Link:</b> <a href="https://apps.ankiweb.net" rel="noopener">apps.ankiweb.net</a></li>
+        </ul>
+        <div class="verified">Verified: Nov 2026 &middot; no tracking beyond optional sync account</div>
+      </article>
+
+      <article class="entry" data-tags="quizlet web browser shared decks free tier">
+        <h3><a href="https://quizlet.com" rel="noopener">Quizlet (free tier)<span class="badge">Free tier</span></a></h3>
+        <p class="desc">The biggest shared-deck site: search millions of user-made nursing decks (pharm, med-surg, A&amp;P) and study them in your browser or phone. Free tier covers creating and studying.</p>
+        <ul class="fields">
+          <li><b>What:</b> Web/mobile flashcards with huge shared deck library</li>
+          <li><b>Cost:</b> Free tier (Quizlet Plus is paid - the free tier is enough for studying and card-making; some newer study modes are Plus-only)</li>
+          <li><b>Requirements:</b> Free account for creating and to save decks</li>
+          <li><b>Link:</b> <a href="https://quizlet.com" rel="noopener">quizlet.com</a></li>
+        </ul>
+        <div class="verified">Verified: Nov 2026 &middot; has ads on free tier</div>
+      </article>
+
+      <article class="entry" data-tags="brainscape web flashcards free tier confidence">
+        <h3><a href="https://www.brainscape.com" rel="noopener">Brainscape (free web)<span class="badge">Free tier</span></a></h3>
+        <p class="desc">Flashcards that rate your confidence on each card and repeat weak spots sooner. Their free web plan lets you create unlimited cards and study shared classes.</p>
+        <ul class="fields">
+          <li><b>What:</b> Confidence-based flashcards on the web</li>
+          <li><b>Cost:</b> Free web tier (Pro is paid: unlimited mobile access, images)</li>
+          <li><b>Requirements:</b> Free account</li>
+          <li><b>Link:</b> <a href="https://www.brainscape.com" rel="noopener">brainscape.com</a></li>
+        </ul>
+        <div class="verified">Verified: Nov 2026</div>
+      </article>
+
+      <article class="entry" data-tags="cram web flashcards free no account">
+        <h3><a href="https://www.cram.com" rel="noopener">Cram.com<span class="badge">No-cost</span></a></h3>
+        <p class="desc">A simpler, older flashcard site - search publics decks (there are plenty of pharmacology sets) and study without bells and whistles. Good when Quizlet feels like too much.</p>
+        <ul class="fields">
+          <li><b>What:</b> Simple web flashcards with shared decks</li>
+          <li><b>Cost:</b> Free (ad-supported)</li>
+          <li><b>Requirements:</b> None to study public decks; account to create/save</li>
+          <li><b>Link:</b> <a href="https://www.cram.com" rel="noopener">cram.com</a></li>
+        </ul>
+        <div class="verified">Verified: Nov 2026 &middot; has ads</div>
+      </article>
+    </div>
+  </section>
+
+  <section id="nclex" data-category="nclex">
+    <h2>NCLEX-Style Practice</h2>
+    <p class="cat-note">Question banks with rationales that cost nothing. Always study the rationale, not just the answer.</p>
+    <div class="grid">
+      <article class="entry" data-tags="nclex rn pn questions rationale khan academy videos">
+        <h3><a href="https://www.khanacademy.org/test-prep/nclex-rn" rel="noopener">Khan Academy NCLEX-RN Prep<span class="badge">Nonprofit</span></a></h3>
+        <p class="desc">Khan's free NCLEX-RN section: thousands of practice questions with rationales plus short video lessons on the high-yield systems. The most straightforward free prep out there.</p>
+        <ul class="fields">
+          <li><b>What:</b> NCLEX-RN-style questions with rationales + video lessons</li>
+          <li><b>Cost:</b> Free, always (Khan is a nonprofit)</li>
+          <li><b>Requirements:</b> None; optional free account to save progress</li>
+          <li><b>Link:</b> <a href="https://www.khanacademy.org/test-prep/nclex-rn" rel="noopener">khanacademy.org/test-prep/nclex-rn</a></li>
+        </ul>
+        <div class="verified">Verified: Nov 2026 &middot; no ads</div>
+      </article>
+
+      <article class="entry" data-tags="nclex practice questions rationale registerednursing">
+        <h3><a href="https://www.registerednursing.org/nclex-practice-questions/" rel="noopener">RegisteredNursing.org Practice Questions</a></h3>
+        <p class="desc">A large bank of free NCLEX-style questions organized by category (fundamentals, pharm, med-surg, psych, pediatrics, maternity) - each with a spelled-out rationale.</p>
+        <ul class="fields">
+          <li><b>What:</b> Categorized NCLEX-style question bank with rationales</li>
+          <li><b>Cost:</b> Free on the site</li>
+          <li><b>Requirements:</b> None to take practice questions</li>
+          <li><b>Link:</b> <a href="https://www.registerednursing.org/nclex-practice-questions/" rel="noopener">registerednursing.org/nclex-practice-questions</a></li>
+        </ul>
+        <div class="verified">Verified: Nov 2026 &middot; site sells its own paid review course; the question bank itself is free</div>
+      </article>
+
+      <article class="entry" data-tags="nclex questions nurse plus free">
+        <h3><a href="https://nurse.plus/nclex-practice/" rel="noopener">NursePlus (nurse.plus) Free Questions</a></h3>
+        <p class="desc">Another free practice-question site with NCLEX-style item sets by topic and with rationales. A nice second source so you see questions written different ways.</p>
+        <ul class="fields">
+          <li><b>What:</b> Topic-based NCLEX-style practice sets with rationales</li>
+          <li><b>Cost:</b> Free</li>
+          <li><b>Requirements:</b> None</li>
+          <li><b>Link:</b> <a href="https://nurse.plus/nclex-practice/" rel="noopener">nurse.plus/nclex-practice</a></li>
+        </ul>
+        <div class="verified">Verified: Nov 2026 &middot; has ads</div>
+      </article>
+
+      <article class="entry" data-tags="ncsbn official nclex candidate guide test plan">
+        <h3><a href="https://www.ncsbn.org/nclex/" rel="noopener">NCSBN Official NCLEX Page</a></h3>
+        <p class="desc">Not practice questions - the actual rulebook. The folks who write the NCLEX publish the current test plan, candidate guide, and how the exam works. Read it once so nothing on test day surprises you.</p>
+        <ul class="fields">
+          <li><b>What:</b> Official test plan, candidate handbook, exam info</li>
+          <li><b>Cost:</b> Free PDFs (note: the exam itself has a registration fee)</li>
+          <li><b>Requirements:</b> None</li>
+          <li><b>Link:</b> <a href="https://www.ncsbn.org/nclex/" rel="noopener">ncsbn.org/nclex</a></li>
+        </ul>
+        <div class="verified">Verified: Nov 2026 &middot; official regulator, no ads</div>
+      </article>
+    </div>
+  </section>
+
+  <section id="journals" data-category="journals">
+    <h2>Journals &amp; Articles</h2>
+    <p class="cat-note">Where to actually read research without hitting a paywall.</p>
+    <div class="grid">
+      <article class="entry" data-tags="pubmed central free full text research nih">
+        <h3><a href="https://pmc.ncbi.nlm.nih.gov" rel="noopener">PubMed Central (PMC)<span class="badge">NIH</span></a></h3>
+        <p class="desc">A free archive of millions of full-text biomedical and life-science journal articles from the National Institutes of Health. When your care-plan requires an evidence source, start here.</p>
+        <ul class="fields">
+          <li><b>What:</b> Free full-text research article archive</li>
+          <li><b>Cost:</b> Free, always (U.S. government)</li>
+          <li><b>Requirements:</b> None</li>
+          <li><b>Link:</b> <a href="https://pmc.ncbi.nlm.nih.gov" rel="noopener">pmc.ncbi.nlm.nih.gov</a></li>
+        </ul>
+        <div class="verified">Verified: Nov 2026 &middot; no ads</div>
+      </article>
+
+      <article class="entry" data-tags="pubmed search database abstracts">
+        <h3><a href="https://pubmed.ncbi.nlm.nih.gov" rel="noopener">PubMed</a></h3>
+        <p class="desc">The search engine for medical literature. Abstracts are free for everything; look for "Free PMC article" tags on results to get the whole paper. Pair PubMed searching with PMC reading.</p>
+        <ul class="fields">
+          <li><b>What:</b> Literature search engine (36M+ citations)</li>
+          <li><b>Cost:</b> Free (U.S. government)</li>
+          <li><b>Requirements:</b> None</li>
+          <li><b>Link:</b> <a href="https://pubmed.ncbi.nlm.nih.gov" rel="noopener">pubmed.ncbi.nlm.nih.gov</a></li>
+        </ul>
+        <div class="verified">Verified: Nov 2026 &middot; no ads</div>
+      </article>
+
+      <article class="entry" data-tags="doaj open access journals directory">
+        <h3><a href="https://doaj.org" rel="noopener">DOAJ (Directory of Open Access Journals)</a></h3>
+        <p class="desc">A vetted directory of legitimate open-access journals, including many nursing titles. Handy when you need articles from a specific nursing journal and don't have a school library login.</p>
+        <ul class="fields">
+          <li><b>What:</b> Searchable directory of 20k+ open-access journals</li>
+          <li><b>Cost:</b> Free</li>
+          <li><b>Requirements:</b> None</li>
+          <li><b>Link:</b> <a href="https://doaj.org" rel="noopener">doaj.org</a></li>
+        </ul>
+        <div class="verified">Verified: Nov 2026 &middot; no ads</div>
+      </article>
+    </div>
+  </section>
+
+  <section id="scholarships" data-category="scholarships">
+    <h2>Scholarships</h2>
+    <p class="cat-note">Real programs, no pay-to-apply sites. Re-check deadlines and eligibility every semester - they change.</p>
+    <div class="grid">
+      <article class="entry" data-tags="hrsa nurse corps scholarship service loan repayment federal">
+        <h3><a href="https://www.hrsa.gov/programs/nurse-corps-scholarship" rel="noopener">HRSA Nurse Corps Scholarship</a></h3>
+        <p class="desc">A federal scholarship: it can pay tuition, fees, and a monthly stipend in exchange for working a set period at a Critical Shortage Facility after you graduate. Serious commitment, serious funding.</p>
+        <ul class="fields">
+          <li><b>What:</b> Federal tuition scholarship + stipend for a service commitment</li>
+          <li><b>Cost:</b> Free to apply</li>
+          <li><b>Requirements:</b> U.S. citizen, enrolled or accepted in an approved RN program; annual application window; service obligation after graduation</li>
+          <li><b>Link:</b> <a href="https://www.hrsa.gov/programs/nurse-corps-scholarship" rel="noopener">hrsa.gov/programs/nurse-corps-scholarship</a></li>
+        </ul>
+        <div class="verified">Verified: Nov 2026 &middot; deadline closes early in the year - check the site</div>
+      </article>
+
+      <article class="entry" data-tags="aacn scholarships nursing students foundation">
+        <h3><a href="https://www.aacnnursing.org/students/scholarships" rel="noopener">AACN &amp; Partner Scholarships</a></h3>
+        <p class="desc">The American Association of Colleges of Nursing lists scholarships from its member foundations and partners (including the AfterCollege-AACN award). A good once-a-semester sweep.</p>
+        <ul class="fields">
+          <li><b>What:</b> List of nursing-student scholarship programs</li>
+          <li><b>Cost:</b> Free to apply (varies by program)</li>
+          <li><b>Requirements:</b> Varies by scholarship; typically enrolled in an AACN-member school or a nursing degree program</li>
+          <li><b>Link:</b> <a href="https://www.aacnnursing.org/students/scholarships" rel="noopener">aacnnursing.org/students/scholarships</a></li>
+        </ul>
+        <div class="verified">Verified: Nov 2026</div>
+      </article>
+
+      <article class="entry" data-tags="nsna national student nurses association scholarships">
+        <h3><a href="https://www.nsna.org/foundation.html" rel="noopener">NSNA Foundation Scholarships</a></h3>
+        <p class="desc">The National Student Nurses' Association's Foundation awards scholarships to pre-nursing and nursing students every year. If you're an NSNA member already, you've got a head start.</p>
+        <ul class="fields">
+          <li><b>What:</b> Annual scholarships from the student-nurse association</li>
+          <li><b>Cost:</b> Free to apply</li>
+          <li><b>Requirements:</b> Enrolled in a state-approved RN/LPN program (or pre-nursing); NSNA membership preferred; spring deadline</li>
+          <li><b>Link:</b> <a href="https://www.nsna.org/foundation.html" rel="noopener">nsna.org/foundation.html</a></li>
+        </ul>
+        <div class="verified">Verified: Nov 2026</div>
+      </article>
+    </div>
+  </section>
+
+  <section id="drugs" data-category="drugs">
+    <h2>Drug References</h2>
+    <p class="cat-note">Free, trustworthy references. Education only - for real patients, the licensed pharmacist and your facility's formulary win.</p>
+    <div class="grid">
+      <article class="entry" data-tags="dailymed fda drug labels nih">
+        <h3><a href="https://dailymed.nlm.nih.gov/dailymed/" rel="noopener">DailyMed<span class="badge">NIH/FDA</span></a></h3>
+        <p class="desc">The official FDA drug-label database. Every detail on the package insert - indications, contraindications, pregnancy category, more - free and authoritative. Great for pharm cards you can cite.</p>
+        <ul class="fields">
+          <li><b>What:</b> Official FDA drug labeling database (40k+ labels)</li>
+          <li><b>Cost:</b> Free (U.S. government)</li>
+          <li><b>Requirements:</b> None</li>
+          <li><b>Link:</b> <a href="https://dailymed.nlm.nih.gov/dailymed/" rel="noopener">dailymed.nlm.nih.gov</a></li>
+        </ul>
+        <div class="verified">Verified: Nov 2026 &middot; no ads</div>
+      </article>
+
+      <article class="entry" data-tags="lactmed breastfeeding drug safety nih bookshelf">
+        <h3><a href="https://www.ncbi.nlm.nih.gov/books/n/lactmedbook/" rel="noopener">LactMed<span class="badge">NIH</span></a></h3>
+        <p class="desc">A free NIH BookShelf database on drug safety in breastfeeding - levels in milk, infant effects, alternatives. The reference many OB units quietly keep open.</p>
+        <ul class="fields">
+          <li><b>What:</b> Drugs and lactation reference database</li>
+          <li><b>Cost:</b> Free (U.S. government)</li>
+          <li><b>Requirements:</b> None</li>
+          <li><b>Link:</b> <a href="https://www.ncbi.nlm.nih.gov/books/n/lactmedbook/" rel="noopener">ncbi.nlm.nih.gov/books/n/lactmedbook</a></li>
+        </ul>
+        <div class="verified">Verified: Nov 2026 &middot; no ads</div>
+      </article>
+
+      <article class="entry" data-tags="drugs.com interactions pill identifier free tier">
+        <h3><a href="https://www.drugs.com" rel="noopener">Drugs.com (free tier)<span class="badge">Free tier</span></a></h3>
+        <p class="desc">Fast, readable monographs and a free interaction checker with a warning-tier system that's easy to understand. Consumer-oriented, but sourced from standard references.</p>
+        <ul class="fields">
+          <li><b>What:</b> Drug monographs, interaction checker, pill identifier</li>
+          <li><b>Cost:</b> Free tier (Pro subscription adds more, not needed for study)</li>
+          <li><b>Requirements:</b> None for most features</li>
+          <li><b>Link:</b> <a href="https://www.drugs.com" rel="noopener">drugs.com</a></li>
+        </ul>
+        <div class="verified">Verified: Nov 2026 &middot; has ads; always cross-check a second source for papers/care plans</div>
+      </article>
+
+      <article class="entry" data-tags="medscape reference free account drug disease ce">
+        <h3><a href="https://www.medscape.com" rel="noopener">Medscape</a></h3>
+        <p class="desc">A deep professional reference: drug monographs with dosing, disease overviews, and free nursing CEUs with a free account. Clinician-grade, still $0.</p>
+        <ul class="fields">
+          <li><b>What:</b> Drug/disease reference + free CE courses</li>
+          <li><b>Cost:</b> Free (requires account)</li>
+          <li><b>Requirements:</b> Free account; full site behind a one-time login</li>
+          <li><b>Link:</b> <a href="https://www.medscape.com" rel="noopener">medscape.com</a></li>
+        </ul>
+        <div class="verified">Verified: Nov 2026 &middot; has ads and needs an account</div>
+      </article>
+    </div>
+  </section>
+
+  <section id="sims" data-category="sims">
+    <h2>Sim Labs &amp; Scenario Learning</h2>
+    <p class="cat-note">Free simulated-case experiences you can practice skills and judgment with - no manikin, no lab fee.</p>
+    <div class="grid">
+      <article class="entry" data-tags="nhs e-lfh elearning healthcare free modules uk simulator">
+        <h3><a href="https://www.e-lfh.org.uk" rel="noopener">NHS e-Learning for Healthcare<span class="badge">Nonprofit</span></a></h3>
+        <p class="desc">The UK National Health Service's free e-learning platform: hundreds of clinical modules (wound care, diabetes, mental health, safe medication) built as interactive case-style lessons.</p>
+        <ul class="fields">
+          <li><b>What:</b> Interactive clinical e-learning courses from the NHS</li>
+          <li><b>Cost:</b> Free</li>
+          <li><b>Requirements:</b> Free registration for most modules</li>
+          <li><b>Link:</b> <a href="https://www.e-lfh.org.uk" rel="noopener">e-lfh.org.uk</a></li>
+        </ul>
+        <div class="verified">Verified: Nov 2026 &middot; no ads; UK-context notes some care-standard differences</div>
+      </article>
+
+      <article class="entry" data-tags="train learning network phf free courses cdc public health">
+        <h3><a href="https://www.train.org/main" rel="noopener">TRAIN Learning Network<span class="badge">Nonprofit</span></a></h3>
+        <p class="desc">A national learning network (run by the Public Health Foundation) with thousands of free courses from CDC, HRSA, and state health departments - many case-based, some with certificates.</p>
+        <ul class="fields">
+          <li><b>What:</b> Public-health and clinical e-learning course catalog</li>
+          <li><b>Cost:</b> Free</li>
+          <li><b>Requirements:</b> Free account</li>
+          <li><b>Link:</b> <a href="https://www.train.org/main" rel="noopener">train.org</a></li>
+        </ul>
+        <div class="verified">Verified: Nov 2026 &middot; no ads</div>
+      </article>
+
+      <article class="entry" data-tags="ahrq psnet patient safety cases learning">
+        <h3><a href="https://psnet.ahrq.gov" rel="noopener">AHRQ PSNet Case Learning</a></h3>
+        <p class="desc">The federal patient-safety network publishes real-world safety cases, primers, and weekly literature digests - an excellent (and free) way to learn why iPASS and SBAR exist.</p>
+        <ul class="fields">
+          <li><b>What:</b> Patient-safety cases, primers, and digest</li>
+          <li><b>Cost:</b> Free (U.S. government)</li>
+          <li><b>Requirements:</b> None</li>
+          <li><b>Link:</b> <a href="https://psnet.ahrq.gov" rel="noopener">psnet.ahrq.gov</a></li>
+        </ul>
+        <div class="verified">Verified: Nov 2026 &middot; no ads</div>
+      </article>
+
+      <article class="entry" data-tags="khan academy health medicine vitals interactive quiz">
+        <h3><a href="https://www.khanacademy.org/health-and-medicine" rel="noopener">Khan Academy Health &amp; Medicine</a></h3>
+        <p class="desc">Interactive A&amp;P and clinical lessons - including walking through vital signs in their interactive vital-signs simulator-style tool. A gentler warm-up before lab day.</p>
+        <ul class="fields">
+          <li><b>What:</b> Interactive clinical and A&amp;P lessons + tools</li>
+          <li><b>Cost:</b> Free (nonprofit)</li>
+          <li><b>Requirements:</b> None</li>
+          <li><b>Link:</b> <a href="https://www.khanacademy.org/health-and-medicine" rel="noopener">khanacademy.org/health-and-medicine</a></li>
+        </ul>
+        <div class="verified">Verified: Nov 2026 &middot; no ads</div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p><strong>Asdale Dynamics, LLC</strong> - Dylan Asdale, RN. Explaining things like a friend would: plain English, step by step, never condescending. More at <a href="https://dylanasdale.github.io" rel="noopener">dylanasdale.github.io</a>.</p>
+  <p>This directory lists third-party resources for education only. We don't accept ads, affiliate links, or paid placements, and we're not affiliated with any nursing program or the resources listed. Nothing here is medical advice. If you spot a dead link or a wrong free-tier note, open an issue - entries are re-verified by hand each semester.</p>
+  <p><a href="https://github.com/dylanasdale/free-nursing-student-freebies-directory" rel="noopener">GitHub</a> &middot; MIT License - Copyright (c) 2026 Asdale Dynamics, LLC</p>
+</footer>
+
+<script>
+(function () {
+  var buttons = Array.prototype.slice.call(document.querySelectorAll('.controls button'));
+  var searchBox = document.getElementById('search');
+  var sections = Array.prototype.slice.call(document.querySelectorAll('main section'));
+  var emptyMsg = document.getElementById('empty');
+
+  function applyFilter() {
+    var activeBtn = document.querySelector('.controls button.active');
+    var cat = activeBtn ? activeBtn.getAttribute('data-filter') : 'all';
+    var q = searchBox.value.trim().toLowerCase();
+    var anyVisible = false;
+
+    sections.forEach(function (section) {
+      var sectionMatch = cat === 'all' || section.getAttribute('data-category') === cat;
+      var visibleInSection = 0;
+      var entries = section.querySelectorAll('article.entry');
+      entries.forEach(function (entry) {
+        var tags = (entry.getAttribute('data-tags') || '').toLowerCase();
+        var text = entry.textContent.toLowerCase();
+        var tagMatch = !q || tags.indexOf(q) !== -1 || text.indexOf(q) !== -1;
+        var show = sectionMatch && tagMatch;
+        entry.style.display = show ? '' : 'none';
+        if (show) { visibleInSection++; anyVisible = true; }
+      });
+      section.style.display = visibleInSection ? '' : 'none';
+    });
+
+    emptyMsg.style.display = anyVisible ? 'none' : 'block';
+  }
+
+  buttons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      buttons.forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      applyFilter();
+    });
+  });
+
+  searchBox.addEventListener('input', applyFilter);
+})();
+</script>
+</body>
+</html>
